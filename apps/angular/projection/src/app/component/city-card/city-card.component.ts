@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CityStore } from '../../data-access/city.store';
 
 @Component({
   selector: 'app-city-card',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   imports: [],
 })
 export class CityCardComponent implements OnInit {
-  constructor() {}
+  cities$ = this.store.cities$;
 
-  ngOnInit(): void {}
+  constructor(
+    private http: FakeHttpService,
+    private store: CityStore,
+  ) {}
 }
