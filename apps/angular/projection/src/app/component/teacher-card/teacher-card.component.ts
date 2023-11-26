@@ -13,7 +13,7 @@ import { CardComponent } from '../../ui/card/card.component';
     customClass="bg-light-red"></app-card>`,
   styles: [
     `
-      ::ng-deep .bg-light-red {
+      .bg-light-red {
         background-color: rgba(250, 0, 0, 0.1);
       }
     `,
